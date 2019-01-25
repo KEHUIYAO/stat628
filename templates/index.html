@@ -1,0 +1,127 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head><meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+
+
+	<link href="https://files.ketodietapp.com/Blog/theme/theme-2.min.css" rel="stylesheet" type="text/css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
+
+
+
+
+</title>
+	<meta name="description" content="Our body fat calculator lets you estimate your body fat percentage quickly and accurately. It&#39;s based on the Jackson &amp; Pollock ..." /><link href="https://ketodietapp.com/Blog/page/body-fat-calculator" rel="canonical" /></head>
+
+<body id="bd">
+
+
+
+
+
+
+
+        <div itemscope='itemscope' itemtype='http://schema.org/Blog' style='display: none;'>
+            <meta content='KetoDiet Blog' itemprop='name' />
+            <meta content='Healthy low-carb, keto and paleo recipes plus free guides and diet plans to help you achieve your goals on the ketogenic diet' itemprop='description' />
+        </div>
+
+        <div class="container py-3">
+            <div class="row">
+                <div id="kd-main-content" class="col-12 col-lg-8">
+
+
+
+                    <section id="ctl00_kdBodySection">
+
+
+
+      <div id="page" class="sectionPage" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemid="https://ketodietapp.com/Blog/page/body-fat-calculator#pa">
+        <h1 id="ctl00_cphBody_h1Title" itemprop="headline">Body Fat Calculator</h1>
+        <div style="display:none">
+            <div itemprop="author" itemscope="itemscope" itemtype="https://schema.org/Person">
+                <meta content="Martina Slajerova" itemprop="name" />
+                <meta content="Creator of KetoDietApp.com" itemprop="jobTitle" />
+                <meta content="https://KetoDietApp.com/Blog/author/martina" itemprop="url" />
+            </div>
+            <div itemprop="publisher" itemscope="itemscope" itemtype="https://schema.org/Organization">
+                <meta content="KetoDiet Blog" itemprop="name" />
+                <div itemprop="logo" itemscope="itemscope" itemtype="https://schema.org/ImageObject">
+                    <meta content="http://KetoDietApp.com/Blog/Custom/Themes/KetoDiet-2015/images/KetoDietLogo.png" itemprop="url" />
+                    <meta content="512" itemprop="width" />
+                    <meta content="512" itemprop="height" />
+                </div>
+            </div>
+        </div>
+      </div>
+
+
+<div class="content-section">
+        <form method="POST" action="">
+            {{ form.hidden_tag() }}
+            <fieldset class="form-group"/>
+                <p>Our body fat calculator lets you estimate your body fat percentage quickly and accurately.
+                <div>
+                    <img src="/static/waistmeasurement.jpg">
+    	        </div>
+                <div class="form-group">
+                    {{ form.age.label(class="Please enter your age below") }}
+                    {% if form.age.errors %}
+                        {{ form.age(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.age.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.age(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+                <div class="form-group">
+                    {{ form.waistline.label(class="form-control-label") }}
+                    {% if form.waistline.errors %}
+                        {{ form.waistline(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.waistline.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.waistline(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+
+            </fieldset>
+            <div class="form-group">
+                {{ form.submit(class="btn btn-outline-info") }}
+            </div>
+
+        </form>
+</div>
+
+
+
+
+	<div id="kdbResults">
+
+		<div id="bodyFatPercentage">
+			<div style="font-size: 2rem; text-align: center; margin-top: 1rem; margin-bottom: 3rem;">Your body fat percentage is <strong id="bodyFatPercentageValue"></strong>{{Result}}%;</div>
+
+
+		</div>
+    </div>
+
+
+
+
+
+</section>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+
+</html>
