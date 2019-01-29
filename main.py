@@ -21,5 +21,6 @@ def login():
 
     #return render_template('index.html', title='body fat calculator', form=form)
     return render_template('index.html',form=form)
+    #return render_template('main.html')
 if __name__ == '__main__':
     app.run(debug=True)

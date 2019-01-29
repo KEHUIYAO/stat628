@@ -2,10 +2,21 @@
 
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head><meta http-equiv="content-type" content="text/html; charset=utf-8" />
 
+<style>
+#bodyFatPercentageValue{color:red;}
+.buttonHolder{ text-align: center; }
+.description {
 
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color:darkolivegreen;
+}
+
+</style>
 
 	<link href="https://files.ketodietapp.com/Blog/theme/theme-2.min.css" rel="stylesheet" type="text/css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
 
@@ -40,6 +51,7 @@
 
       <div id="page" class="sectionPage" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemid="https://ketodietapp.com/Blog/page/body-fat-calculator#pa">
         <h1 id="ctl00_cphBody_h1Title" itemprop="headline">Body Fat Calculator</h1>
+
         <div style="display:none">
             <div itemprop="author" itemscope="itemscope" itemtype="https://schema.org/Person">
                 <meta content="Martina Slajerova" itemprop="name" />
@@ -62,10 +74,12 @@
         <form method="POST" action="">
             {{ form.hidden_tag() }}
             <fieldset class="form-group"/>
-                <p>Our body fat calculator lets you estimate your body fat percentage quickly and accurately.
-                <div>
-                    <img src="/static/waistmeasurement.jpg">
-    	        </div>
+                <p>Our body fat calculator lets you estimate your body fat percentage quickly and accurately.</p>
+
+
+                <p><img src="/static/waistmeasurement.jpg" alt="Smiley face", align="center"> </p>
+
+                <p class="description">Our body fat calculator lets you estimate your body fat percentage quickly and accurately.</p>
                 <div class="form-group">
                     {{ form.age.label(class="Please enter your age below") }}
                     {% if form.age.errors %}
@@ -94,9 +108,12 @@
                 </div>
 
             </fieldset>
-            <div class="form-group">
-                {{ form.submit(class="btn btn-outline-info") }}
+            <div class="buttonHolder">
+                {{ form.submit(class="btn btn-outline-info")}}
             </div>
+
+
+
 
         </form>
 </div>
@@ -107,7 +124,7 @@
 	<div id="kdbResults">
 
 		<div id="bodyFatPercentage">
-			<div style="font-size: 2rem; text-align: center; margin-top: 1rem; margin-bottom: 3rem;">Your body fat percentage is <strong id="bodyFatPercentageValue"></strong>{{Result}}%;</div>
+			<div style="font-size: 2rem; color:blue; text-align: center; margin-top: 1rem; margin-bottom: 3rem;">Your body fat percentage is <strong id="bodyFatPercentageValue"> {{Result}} </strong> %;</div>
 
 
 		</div>
@@ -122,6 +139,10 @@
             </div>
         </div>
     </form>
+
+
+
+
 </body>
 
 </html>

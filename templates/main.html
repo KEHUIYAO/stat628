@@ -1,0 +1,277 @@
+
+<html>
+<head>	<title>Body Fat Calculator</title>
+
+	<link rel="stylesheet" href="//d26tpo4cm8sb6k.cloudfront.net/style2.css" /></head>
+<body>
+<div id="headerout">
+
+</div>
+<div id="clear"></div><div id="contentout"><div id="content"><div class='smalltext smtbtop'></a></div><h1>Body Fat Calculator</h1>
+
+<p>The Body Fat Calculator can be used to estimate your total body fat based on specific measurements. Use the "Metric Units" tab if you are more comfortable with the International System of Units (SI). To get the best results, measure to the nearest 1/4 inch (0.5 cm). This calculation is based on the <a href="/pdf/navy-physical-readiness-program.pdf">U.S. Navy method</a>, but also includes the calculation of body fat percentage using the BMI method (both of which are outlined below).</p><div id="insmdc"><img src="//d26tpo4cm8sb6k.cloudfront.net/img/svg/insm.svg"></div>
+
+<span id="ucframe"></span>
+<div class="leftinput">
+<div id="topmenu" class="topmenucenter"><ul><li id='menuon'><a href="#" onclick="popMenu('standard');">US units</a></li><li><a href="#" onclick="popMenu('metric');">metric units</a></li> <li><a href="#" onclick="popMenu('other');">other units</a></li></ul></div>
+<div class="panel2">
+<table id="calinputtable" width="310">
+<form name="calform">
+<input type="hidden" name="ctype" id="ctype" value="standard">
+<tr>
+	<td width="70">Gender</td>
+	<td width="240"><label for="csex1" class="cbcontainer"><input type="radio" name="csex" id="csex1" value="m" checked /><span class="rbmark"></span>male</label> &nbsp; <label for="csex2" class="cbcontainer"><input type="radio" name="csex" id="csex2" value="f"  /><span class="rbmark"></span>female</label></td>
+</tr>
+<tr>
+	<td width="70">Age</td>
+	<td width="240"><input type="text" name="cage" value="25" class="inlongest" onKeyUp="iptfieldCheck(this, 'r', 'pn');"></td>
+</tr>
+</table>
+<table width="310" id="standardheightweight">
+<tr>
+	<td width="70">Weight</td>
+	<td width="240"><input type="text" name="cweightlbs" value="152" class="inlongest inuipound" onKeyUp="iptfieldCheck(this, 'r', 'pn');"><span class="inuipoundspan">pounds</span></td>
+</tr>
+<tr>
+	<td width="70">Height</td>
+	<td width="240">
+		<table border="0" cellpadding="0" cellspacing="0"><tr><td>
+			<input type="text" name="cheightfeet" id="cheightfeet" value="5" class="inlongesthalf inuifoot" onKeyUp="iptfieldCheck(this, '', 'pzn');"><span class="inuifootspan">feet</span>
+		</td><td>&nbsp;</td><td>
+			<input type="text" name="cheightinch" id="cheightinch" value="10.5" class="inlongesthalf inuiinch" onKeyUp="iptfieldCheck(this, '', 'pzn');"><span class="inuiinchspan">inches</span>
+		</td></tr></table>
+	</td>
+</tr>
+<tr>
+	<td width="70">Neck</td>
+	<td width="240">
+		<table border="0" cellpadding="0" cellspacing="0"><tr><td>
+			<input type="text" name="cneckfeet" id="cneckfeet" value="1" class="inlongesthalf inuifoot" onKeyUp="iptfieldCheck(this, '', 'pzn');"><span class="inuifootspan">feet</span>
+		</td><td>&nbsp;</td><td>
+			<input type="text" name="cneckinch" id="cneckinch" value="7.5" class="inlongesthalf inuiinch" onKeyUp="iptfieldCheck(this, '', 'pzn');"><span class="inuiinchspan">inches</span>
+		</td></tr></table>
+	</td>
+</tr>
+<tr>
+	<td width="70">Waist</td>
+	<td width="240">
+		<table border="0" cellpadding="0" cellspacing="0"><tr><td>
+			<input type="text" name="cwaistfeet" id="cwaistfeet" value="3" class="inlongesthalf inuifoot" onKeyUp="iptfieldCheck(this, '', 'pzn');"><span class="inuifootspan">feet</span>
+		</td><td>&nbsp;</td><td>
+			<input type="text" name="cwaistinch" id="cwaistinch" value="1.5" class="inlongesthalf inuiinch" onKeyUp="iptfieldCheck(this, '', 'pzn');"><span class="inuiinchspan">inches</span>
+		</td></tr></table>
+	</td>
+</tr>
+<tr>
+	<td width="70">Hip</td>
+	<td width="240">
+		<table border="0" cellpadding="0" cellspacing="0"><tr><td>
+			<input type="text" name="chipfeet" id="chipfeet" value="2" class="inlongesthalf inuifoot" onKeyUp="iptfieldCheck(this, '', 'pzn');"><span class="inuifootspan">feet</span>
+		</td><td>&nbsp;</td><td>
+			<input type="text" name="chipinch" id="chipinch" value="10.5" class="inlongesthalf inuiinch" onKeyUp="iptfieldCheck(this, '', 'pzn');"><span class="inuiinchspan">inches</span>
+		</td></tr></table>
+	</td>
+</tr>
+</table>
+<table width="310" id="metricheightweight">
+<tr>
+	<td width="70">Weight</td>
+	<td width="240"><input type="text" name="cweightkgs" value="70" class="inlongest inuick" onKeyUp="iptfieldCheck(this, 'r', 'pn');"><span class="inuickspan">kg</span></td>
+</tr>
+<tr>
+	<td width="70">Height</td>
+	<td width="240"><input type="text" name="cheightmeter" id="cheightmeter" value="178" class="inlongest inuick" onKeyUp="iptfieldCheck(this, 'r', 'pn');"><span class="inuickspan">cm</span></td>
+</tr>
+<tr>
+	<td width="70">Neck</td>
+	<td width="240"><input type="text" name="cneckmeter"  id="cneckmeter" value="50" class="inlongest inuick" onKeyUp="iptfieldCheck(this, 'r', 'pn');"><span class="inuickspan">cm</span></td>
+</tr>
+<tr>
+	<td width="70">Waist</td>
+	<td width="240"><input type="text" name="cwaistmeter" id="cwaistmeter" value="96" class="inlongest inuick" onKeyUp="iptfieldCheck(this, 'r', 'pn');"><span class="inuickspan">cm</span></td>
+</tr>
+<tr>
+	<td width="70">Hip</td>
+	<td width="240"><input type="text" name="chipmeter" id="chipmeter" value="92" class="inlongest inuick" onKeyUp="iptfieldCheck(this, 'r', 'pn');"><span class="inuickspan">cm</span></td>
+</tr>
+</table>
+<table width="310">
+<tr>
+	<td align="center" style="padding: 8px;"><input type="image" src="//d26tpo4cm8sb6k.cloudfront.net/img/svg/calculate.svg" value="Calculate" alt="Calculate"> <img src="//d26tpo4cm8sb6k.cloudfront.net/img/svg/clear.svg" onClick="clearForm(document.calform);" class="clearbtn"></td>
+</tr>
+</form>
+</table>
+</div>
+
+</div>
+<div class="rightresult">
+<h2 class="h2result">Result</h2><p class='verybigtext'><font color='green'><b>Body Fat: 15.3%</b></font></p><table width="320" cellspacing="0" cellpadding="0" border="0" align="center" style="margin-top:5px;"><tr><td><div style="margin-left: 109px;">15.3%<br><img src="//d26tpo4cm8sb6k.cloudfront.net/img/arrow-down.png"></div></td></tr><tr><td><img src="//d26tpo4cm8sb6k.cloudfront.net/img/body-fat-man.png" width="320"></td></tr></table><br><table class="cinfoT"><tr><td>Body Fat (U.S. Navy Method)</td><td>15.3%</td></tr><tr><td>Body Fat Category</td><td>Fitness</td></tr><tr><td>Body Fat Mass</td><td>23.2 lbs</td></tr><tr><td>Lean Body Mass</td><td>128.8 lbs</td></tr><tr><td>Ideal Body Fat for Given Age<br>(Jackson &amp; Pollard)</td><td>10.5%</td></tr><tr><td>Body Fat to Lose to Reach Ideal</td><td>7.2 lbs</td></tr><tr><td>Body Fat (BMI method)</td><td>15.4%</td></tr></table></div>
+<div id="clear"></div>
+<script>
+function popMenu(inval, insubmit){
+	htmlVal = "";
+	if (inval == "metric"){
+		htmlVal = htmlVal + "<li><a href=\"#\" onclick=\"popMenu('standard',1);\">US Units</a></li> <li id='menuon'><a href=\"#\" onclick=\"popMenu('metric',1);\">Metric Units</a></li> <li><a href=\"#\" onclick=\"popMenu('other');\">Other Units</a></li>";
+		gObj("ctype").value="metric";
+		gObj("standardheightweight").style.display = 'none';
+		gObj("metricheightweight").style.display = 'block';
+		htmlVal = "<ul>" + htmlVal + "</ul>";
+		gObj("ucframe").innerHTML ="";
+		if (insubmit==1) document.calform.submit();
+	}else if (inval == "standard"){
+		htmlVal = htmlVal + "<li id='menuon'><a href=\"#\" onclick=\"popMenu('standard',1);\">US Units</a></li> <li><a href=\"#\" onclick=\"popMenu('metric',1);\">Metric Units</a></li> <li><a href=\"#\" onclick=\"popMenu('other');\">Other Units</a></li>";
+		gObj("ctype").value="standard";
+		gObj("standardheightweight").style.display = 'block';
+		gObj("metricheightweight").style.display = 'none';
+		htmlVal = "<ul>" + htmlVal + "</ul>";
+		gObj("ucframe").innerHTML ="";
+		if (insubmit==1) document.calform.submit();
+	}else{
+		htmlVal = gObj("topmenu").innerHTML ;
+		gObj("ucframe").innerHTML = "<iframe src=\"/converter/converter.php?type=\" style=\"overflow:hidden;width:100%\" width=\"100%\" height=\"238\" frameborder=\"NO\" scrolling=\"NO\" allowTransparency=\"true\" ></IFRAME>";
+	}
+
+	gObj("topmenu").innerHTML = htmlVal;
+}
+popMenu("standard",0);
+</script>
+
+<br><p><fieldset><legend>Related</legend><a href="/bmi-calculator.html">BMI Calculator</a> | <a href="/calorie-calculator.html">Calorie Calculator</a> | <a href="/ideal-weight-calculator.html">Ideal Weight Calculator</a></fieldset></p>
+<br><h2>Reference</h2>
+
+<p><b>Body Fat Ranges<sup>1</sup></b></p>
+<table class="cinfoT" width="320" align="center">
+	<tr><td class="cinfoHd">Description</td><td class="cinfoHdL">Women</td><td class="cinfoHdL">Men</td></tr>
+	<tr><td>Recommended amount</td><td class="cinfoBodL">20-25%</td><td class="cinfoBodL">8-14%</td></tr>
+	<tr><td>Adults in United States, average</td><td class="cinfoBodL">22-25%</td><td class="cinfoBodL">15-19%</td></tr>
+	<tr><td>Obese</td><td class="cinfoBodL">30+%</td><td class="cinfoBodL">25+%</td></tr>
+</table>
+
+<br><p><b>The American Council on Exercise Body Fat Categorization</b></p>
+<table class="cinfoT" width="320" align="center">
+	<tr><td class="cinfoHd">Description</td><td class="cinfoHdL">Women</td><td class="cinfoHdL">Men</td></tr>
+	<tr><td>Essential fat</td><td class="cinfoBodL">10-13%</td><td class="cinfoBodL">2-5%</td></tr>
+	<tr><td>Athletes</td><td class="cinfoBodL">14-20%</td><td class="cinfoBodL">6-13%</td></tr>
+	<tr><td>Fitness</td><td class="cinfoBodL">21-24%</td><td class="cinfoBodL">14-17%</td></tr>
+	<tr><td>Average</td><td class="cinfoBodL">25-31%</td><td class="cinfoBodL">18-25%</td></tr>
+	<tr><td>Obese</td><td class="cinfoBodL">32+%</td><td class="cinfoBodL">25+%</td></tr>
+</table>
+
+<br><p><b>Jackson & Pollard Ideal Body Fat Percentages</b></p>
+<table class="cinfoT" width="320" align="center">
+<tr><td class="cinfoHd">Age</td><td class="cinfoHdL">Women</td><td class="cinfoHdL">Men</td></tr>
+<tr><td>20</td><td>17.7%</td><td>8.5%</td></tr>
+<tr><td>25</td><td>18.4%</td><td>10.5%</td></tr>
+<tr><td>30</td><td>19.3%</td><td>12.7%</td></tr>
+<tr><td>35</td><td>21.5%</td><td>13.7%</td></tr>
+<tr><td>40</td><td>22.2%</td><td>15.3%</td></tr>
+<tr><td>45</td><td>22.9%</td><td>16.4%</td></tr>
+<tr><td>50</td><td>25.2%</td><td>18.9%</td></tr>
+<tr><td>55</td><td>26.3%</td><td>20.9%</td></tr>
+</table>
+
+
+<br>
+
+<h3>Body Fat, Overweight, and Obesity</h3>
+<p>The scientific term for body fat is "adipose tissue." Adipose tissue serves a number of important functions. Its primary purpose is to store lipids from which the body creates energy. In addition, it secretes a number of important hormones, and provides the body with some cushioning as well as insulation.<sup>1</sup> </p>
+<p>Body fat includes essential body fat and storage body fat. Essential body fat is a base level of fat that is found in most parts of the body. It is necessary fat that maintains life and reproductive functions. The amount of essential fat differs between men and women, and is typically around 2-5% in men, and 10-13% in women. The healthy range of body fat for men is typically defined as 8-19%, while the healthy range for women is 21-33%. While having excess body fat can have many detrimental effects on a person's health, insufficient body fat can have negative health effects of its own, and maintaining a body fat percentage below, or even at the essential body fat percentage range is a topic that should be discussed with a medical professional.</p>
+<p>Storage fat is fat that accumulates in adipose tissue, be it subcutaneous fat (deep under the dermis and wrapped around vital organs) or visceral fat (fat located inside the abdominal cavity, between organs), and references to body fat typically refer to this type of fat. While some storage fat is ideal, excess amounts of storage fat can have serious negative health implications.  </p>
+<p>Excess body fat leads to the condition of being overweight and eventually to obesity given that insufficient measures are taken to curb increasing body fat. Note that being overweight does not necessarily indicate an excess of body fat. A person's body weight is comprised of multiple factors including (but not limited to) body fat, muscle, bone density, and water content. Thus, highly muscular people are often classified as overweight.  </p>
+<p>The rate at which body fat accumulates is different from person to person and is dependent on many factors including genetic factors as well as behavioral factors such as lack of exercise and excessive food intake. Due to varying factors, it can be more difficult for certain people to reduce body fat stored in the abdominal region. However, managing diet and exercise has been shown to reduce stored fat. Note that both women and men store body fat differently and that this can change over time. After the age of 40 (or after menopause in some cases for women), reduced sexual hormones can lead to excess body fat around the stomach in men, or around the buttocks and thighs of women. </p>
+
+<h3>Potential Complications of Excess Body Fat</h3>
+<p>The World Health Organization (WHO) classifies obesity as one of the leading preventable causes of death worldwide that is estimated to claim 111,909 to 365,000 deaths per year in the U.S.<sup>1</sup>  This has been a growing cause for concern because 36.5% of U.S. adults are defined as obese according to the Centers for Disease Control and Prevention.<sup>2</sup></p>
+<p>Obesity is associated with a reduction in quality of life, poorer mental health outcomes, obstructive sleep apnea, as well as multiple leading causes of death worldwide such as cardiovascular disease, stroke, certain cancers and diabetes.<sup>2</sup>  All of these potential complications have the ability to reduce a person's life expectancy, and as such, obesity is a medical condition that is studied by many researchers.</p>
+<p>As previously mentioned, fat produces a number of essential hormones that affect a person's body. An excess or a lack of critical hormones can have negative effects that preclude proper body function. On a related note, studies have found that excess body fat, particularly abdominal fat, disrupts the normal balance and function of some of these hormones. Furthermore, body fat, specifically visceral fat, has a role in the release of specific cytokines, which are a broad category of proteins involved in cell signaling, that can potentially increase the risk of cardiovascular disease. Visceral fat is also directly associated with higher levels of low-density lipoprotein (LDL) cholesterol, lower high-density lipoprotein (HDL) cholesterol, and insulin resistance.<sup>3</sup>  LDL cholesterol is commonly referred to as "bad cholesterol" while HDL is referred to as "good cholesterol." High levels of LDL cholesterol can clog arteries and lead to complications including heart attacks. Insulin resistance involves cells not properly responding to the hormone insulin, which can lead to high blood sugar levels, and eventually to type 2 diabetes.<sup>1</sup>  As can be seen, excess visceral fat can have measurable negative impacts to a person's health.</p>
+
+<h3>Measuring Body Fat Percentage</h3>
+<p><u><b><a href="/pdf/navy-physical-readiness-program.pdf">U.S. Navy Method:</a></b></u></p>
+<p>There are many specific techniques used for measuring body fat. The calculator above uses a method involving equations developed at the Naval Health Research Center by Hodgdon and Beckett in 1984. The method for measuring the relevant body parts as well as the specific equations used are provided below:</p>
+<ul>
+	<li>Measure the circumference of the subject's waist at a horizontal level around the navel for men, and at the level with the smallest width for women. Ensure that the subject does not pull their stomach inwards to obtain accurate measurements.</li>
+	<li>Measure the circumference of the subject's neck starting below the larynx, with the tape sloping downward to the front. The subject should avoid flaring their neck outwards.</li>
+	<li><b>For women only:</b> Measure the circumference of the subject's hips at the largest horizontal measure. </li>
+</ul>
+<p>Once these measurements are obtained, use the following formulas to calculate an estimate of body fat. Two equations are provided, one using the U.S. customary system (USC) which uses inches, and the other using the International System of Units, specifically the unit of centimeters:</p>
+
+<p><b>Body fat percentage (BFP) formula for males:</b></p>
+<table style="padding-left: 50px;">
+	<tr><td>USC Units:</td></tr>
+	<tr><td style="padding-left:20px;">BFP = 86.010&#215;log<sub>10</sub>(abdomen-neck) - 70.041&#215;log<sub>10</sub>(height) + 36.76</td></tr>
+	<tr><td>SI, Metric Units:</td></tr>
+	<tr><td style="padding-left:20px;"><table cellpadding="0" cellspacing="0"><tr>
+<td>BFP = </td>
+<td><table><tr><td align="center">495</td></tr><tr><td bgcolor="#000000" height="1"></td></tr><tr><td align="center">1.0324 - 0.19077&#215;log<sub>10</sub>(waist-neck) ) + 0.15456&#215;log<sub>10</sub>(height)</td></tr></table></td>
+<td>- 450</td>
+</tr></table></td></tr>
+</table>
+
+<p><b>Body fat percentage (BFP) formula for females:</b></p>
+<table style="padding-left: 50px;">
+	<tr><td>USC Units:</td></tr>
+	<tr><td style="padding-left:20px;">BFP = 163.205&#215;log<sub>10</sub>(waist+hip-neck) - 97.684&#215;(log<sub>10</sub>(height)) + 36.76</td></tr>
+	<tr><td>SI, Metric Units:</td></tr>
+	<tr><td style="padding-left:20px;"><table cellpadding="0" cellspacing="0"><tr>
+<td>BFP = </td>
+<td><table><tr><td align="center">495</td></tr><tr><td bgcolor="#000000" height="1"></td></tr><tr><td align="center">1.29579 - 0.35004&#215;log<sub>10</sub>(waist+hip-neck) + 0.22100&#215;log<sub>10</sub>(height) </td></tr></table></td>
+<td>- 450</td>
+</tr></table></td></tr>
+</table>
+
+<p>Note that results of these calculations are only an estimate since they are based on many different assumptions to make them as applicable to as many people as possible. For more accurate measurements of body fat, the use of instruments such as bioelectric impedance analysis or hydrostatic density testing is necessary.</p>
+
+<p><b>Fat mass (FM) formula:</b></p>
+<p style="padding-left: 50px;">
+FM = BF &#215; Weight
+</p>
+<p><b>Lean Mass (LM) formula: </b></p>
+<p style="padding-left: 50px;">
+LM = Weight - FM
+</p>
+
+<br><p><u><b>BMI Method:</b></u></p>
+<p>Another method for calculating an estimate of body fat percentage uses BMI. Refer to the BMI Calculator to obtain an estimate of BMI for use with the BMI method, as well as further detail on how BMI is calculated, its implications, and its limitations. Briefly, the estimation of BMI involves the use of formulas that require the measurement of a person's height and weight. Given BMI, the following formulas can be used to estimate a person's body fat percentage.</p>
+<p><b>Body fat percentage (BFP) formula for adult males:</b></p>
+<p style="padding-left: 50px;">
+	BFP = 1.20 &#215; BMI + 0.23 &#215; Age - 16.2
+</p>
+
+<p><b>Body fat percentage (BFP) formula for adult females:</b></p>
+<p style="padding-left: 50px;">
+BFP = 1.20 &#215; BMI + 0.23 &#215; Age - 5.4
+</p>
+
+<p><b>Body fat percentage (BFP) formula for boys:</b></p>
+<p style="padding-left: 50px;">
+BFP = 1.51 &#215; BMI - 0.70 &#215; Age - 2.2
+</p>
+<p><b>Body fat percentage (BFP) formula for girls:</b></p>
+<p style="padding-left: 50px;">
+BFP = 1.51 &#215; BMI - 0.70 &#215; Age + 1.4
+</p>
+
+<br>
+<ol class="reference">
+	<li>Wikipedia.org</li>
+	<li>"Overweight & Obesity." <i>Centers for Disease Control and Prevention</i>. www.cdc.gov/obesity/data/index.html</li>
+	<li>"Abdominal fat and what to do about it." <i>Harvard Health Publishing: Harvard Medical School</i>. www.health.harvard.edu/staying-healthy/abdominal-fat-and-what-to-do-about-it</li>
+</ol>
+
+</div>
+	<div id="right">
+		<div style="padding-top:10px;"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Calculator -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:336px;height:280px"
+     data-ad-client="ca-pub-2927677119936553"
+     data-ad-slot="1395081263"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+<div id="socialshare" style="padding-top: 16px;"></div><br>
+<div id="clear"></div>
+
+
+</body>
+</html>
