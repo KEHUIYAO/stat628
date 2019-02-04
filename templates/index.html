@@ -77,9 +77,21 @@
                 <p>Our body fat calculator lets you estimate your body fat percentage quickly and accurately.</p>
 
 
-                <p><img src="/static/waistmeasurement.jpg" alt="Smiley face", align="center"> </p>
+                <p><img src="/static/pic1.jpg" alt="Smiley face", align="center"> </p>
+                <div class="form-group">
+                    {{ form.unit.label(class="Please enter your unit below") }}
+                    {% if form.unit.errors %}
+                        {{ form.unit(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.unit.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.unit(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
 
-                <p class="description">Our body fat calculator lets you estimate your body fat percentage quickly and accurately.</p>
                 <div class="form-group">
                     {{ form.age.label(class="Please enter your age below") }}
                     {% if form.age.errors %}

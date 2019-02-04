@@ -16,7 +16,13 @@ def login():
     form =InputForm()
     if  request.method == "POST" and form.validate_on_submit():
        #form.username.data
-       res=form.age.data+form.waistline.data
+       if form.unit.data=="k":
+           res=-41+0.9*float(form.age.data)-(0.1/0.045359237)*0.1*float(form.waistline.data)
+       else:
+           res = -41 + (0.9/0.354330709)*0.9 * float(form.age.data) - 0.1 * float(form.waistline.data)
+       if res < 0:
+           res = 0
+       res=round(res,1)
        return render_template('index.html',form=form,Result=res)
 
     #return render_template('index.html', title='body fat calculator', form=form)
@@ -24,3 +30,4 @@ def login():
     #return render_template('main.html')
 if __name__ == '__main__':
     app.run(debug=True)
+
