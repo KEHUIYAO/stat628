@@ -12,12 +12,10 @@ def my_check(form, field):
     if x <0 or x>300:
         raise ValidationError('Try to input a reasonable number')
 class InputForm(FlaskForm):
-    unit = RadioField('Measurement Unit', choices=[('k', 'Abdomen(cm), Weight(kg)'), ('l', 'Abdomen(inch), Weight(lb)')],
-                        validators=[DataRequired()])
 
-    age = StringField('Abdomen',
+    age = StringField('Abdomen (cm)',
                            validators=[DataRequired() ,my_check])
-    waistline = StringField('Weight',
+    waistline = StringField('Weight (lb)',
                         validators=[DataRequired(),my_check])
 
     submit = SubmitField('Calculate')

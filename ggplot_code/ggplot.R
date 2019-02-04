@@ -85,3 +85,30 @@ p7 = ggplot(df, aes(x = num, y = res)) + geom_point(shape = 21, size = 2, fill =
 p7
 
 #
+index = c()
+value = c()
+dat$num=NULL
+dat0$num=NULL
+dat1 <- dat0[-c(39,216),-c(1:2)]
+dat2 <- dat1
+dat <- dat2
+dat$WEIGHT=dat$WEIGHT*0.453592
+for (i in 1:dim(dat)[2]){
+  index = c(index, rep(names(dat)[i], 250))
+  value = c(value, dat[, i])
+}
+df = data.frame(index = index, value = value)
+bplot <- function(n){
+  temp=NULL
+  temp = data.frame(name = names(dat),val = unlist(dat[n,]))
+  p = ggplot(df, aes(x = index, y = value)) + 
+    geom_boxplot(outlier.size = 1.5, outlier.shape = 21, fill = 'grey') + stat_summary(fun.y = 'mean', geom = 'point', shape = 22, size = 2, fill = 'lightblue') + 
+    xlab("")+ylab(n)+
+    geom_point(data = temp, aes(x = name, y = val), color = 'red', fill = 'red')
+  p
+}
+
+bplot(182)
+bplot(216)
+bplot(96)
+unlist(dat[3,])

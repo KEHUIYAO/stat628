@@ -78,19 +78,7 @@
 
 
                 <p><img src="/static/pic1.jpg" alt="Smiley face", align="center"> </p>
-                <div class="form-group">
-                    {{ form.unit.label(class="Please enter your unit below") }}
-                    {% if form.unit.errors %}
-                        {{ form.unit(class="form-control form-control-lg is-invalid") }}
-                        <div class="invalid-feedback">
-                            {% for error in form.unit.errors %}
-                                <span>{{ error }}</span>
-                            {% endfor %}
-                        </div>
-                    {% else %}
-                        {{ form.unit(class="form-control form-control-lg") }}
-                    {% endif %}
-                </div>
+
 
                 <div class="form-group">
                     {{ form.age.label(class="Please enter your age below") }}
