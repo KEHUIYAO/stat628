@@ -1,4 +1,4 @@
-# Stat628 module1
+# Stat628 module1 
 
 ## Repository structure:
 
