@@ -18,7 +18,7 @@ The repository contains the data analysis of the Bodyfat dataset. The repo consi
 
 * use pip command to install the two modules, **flask** and **flask_wtf**.[not familar with pip?](https://packaging.python.org/tutorials/installing-packages/)
 
-* open the command line, type ** python main.py **, then the sever automatically start, you can view the web-based calculator by simply click the link popped on the terminal.
+* open the command line, type **python main.py**, then the sever automatically start, you can view the web-based calculator by simply click the link popped on the terminal.
 
 ![](/plot/useflask.png)
 
