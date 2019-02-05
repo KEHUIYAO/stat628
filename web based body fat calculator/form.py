@@ -15,7 +15,7 @@ class InputForm(FlaskForm):
 
     age = StringField('Abdomen (cm)',
                            validators=[DataRequired() ,my_check])
-    waistline = StringField('Weight (lb)',
+    waistline = StringField('Weight (kg)',
                         validators=[DataRequired(),my_check])
 
     submit = SubmitField('Calculate')

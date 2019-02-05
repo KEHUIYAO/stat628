@@ -15,7 +15,7 @@ app.config['SECRET_KEY'] = '5791628bb0b13ce0c676dfde280ba245'
 def login():
     form =InputForm()
     if  request.method == "POST" and form.validate_on_submit():
-       res = -41 + 0.9 * float(form.age.data) -  0.1 * float(form.waistline.data)
+       res = -41 + 0.9 * float(form.age.data) -  0.3 * float(form.waistline.data)
        res=round(res,1)
        return render_template('index.html',form=form,Result=res)
 

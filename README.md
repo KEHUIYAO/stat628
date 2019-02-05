@@ -2,15 +2,17 @@
 
 ## Repository structure:
 
-The repository contains the data analysis of the Bodyfat dataset. The repo consist of four parts:
+The repository contains the data analysis of the Bodyfat dataset. The repo consist of five parts:
 
 * a data folder called **data**, which contains the raw Bodyfat dataset.
 
 * a code folder called **code**, which contains the code about the data cleaning and visualization parts.
 
+* a image folder called **image**, which contains the images related to the data analysis procedure.
+
 * a web-based-app folder called **web based body fat calculator**, which contains a simple bodyfat calculator implemented by flask.
 
-* a file called **bodyfat_summary.ipynb**, which is the Jupyter Notebook containing the summary of our data analysis.
+* a file called **summary.ipynb**, which is the Jupyter Notebook containing the summary of our data analysis.
 
 ## Guidelines of using web-based bodyfat calculator:
 
